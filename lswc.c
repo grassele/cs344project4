@@ -8,14 +8,6 @@ int main(int argc, char *argv[])
 {
     (void) argc;
 
-    // char *path;
-    // if (argc > 1) {
-    //     path = argv[1];
-    // }
-    // else {
-    //     path = "pwd";
-    // }
-
     int pfd[2];
     pipe(pfd);
 
@@ -25,18 +17,15 @@ int main(int argc, char *argv[])
         // child
         dup2(pfd[0], 0);
         close(pfd[1]);
-        execlp("wc -l", *argv, (char *)NULL);
+        execlp("wc", "wc", "-l", NULL);
         perror("exec");
         exit(1);
     } else {
         // parent
         dup2(pfd[1], 1);
         close(pfd[0]);
-        execlp("ls -1a", *argv, (char *)NULL);
+        execlp("ls", "ls", "-1a", argv[1], NULL);
         perror("exec");
         exit(1);
     }
-
-
-
 }
