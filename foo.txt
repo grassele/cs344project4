@@ -1,5 +1,0 @@
-Makefile
-a.out
-foo.txt
-lswc.c
-redirout.c
