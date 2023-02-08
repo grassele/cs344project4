@@ -1,0 +1,8 @@
+total 88
+drwxr-xr-x   7 egrassel  staff    224 Feb  7 20:00 .
+drwxr-xr-x  13 egrassel  staff    416 Feb  6 10:15 ..
+drwxr-xr-x  12 egrassel  staff    384 Feb  7 19:51 .git
+-rwxr-xr-x   1 egrassel  staff  33176 Feb  7 20:00 a.out
+-rw-r--r--   1 egrassel  staff      0 Feb  7 20:00 foo.txt
+-rw-r--r--   1 egrassel  staff    545 Feb  6 12:13 lswc.c
+-rw-r--r--   1 egrassel  staff    545 Feb  7 20:00 redirout.c

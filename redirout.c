@@ -16,12 +16,13 @@ int main(int argc, char *argv[])
     fd = open(argv[1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
     dup2(fd, 1);
 
-    char *com_args[10];
-    for (int i = 2; i < argc; i++) {
-        com_args[i-2] = argv[i];
-    }
+    // char *com_args[10];
+    // for (int i = 2; i < argc; i++) {
+    //     com_args[i-2] = argv[i];
+    // }
 
-    execlp(com_args, NULL);
+    // execvp(com_args[0], com_args);
+    execvp(argv[2], argv + 2);
 
 
 }
