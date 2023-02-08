@@ -18,9 +18,9 @@ int main(int argc, char *argv[])
 
     char *com_args[10];
     for (int i = 2; i < argc; i++) {
-        com_args[i] = argv[i];
+        com_args[i-2] = argv[i];
     }
-    
+
     execlp(com_args, NULL);
 
 
